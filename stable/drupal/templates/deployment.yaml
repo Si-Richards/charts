@@ -41,7 +41,7 @@ spec:
         - "status.localhost"
       containers:
       - name: drupal
-        image: {{ template "drupal.image" . }}
+        image: drupal:7.61-apache
         imagePullPolicy: {{ .Values.image.pullPolicy | quote }}
         env:
         - name: ALLOW_EMPTY_PASSWORD
